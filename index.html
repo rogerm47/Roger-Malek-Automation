@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roger Malek - Process Automation Specialist</title>
+    <meta name="description" content="Transform your business with Roger Malek's process automation services using n8n. Save time and money by automating repetitive tasks.">
+    <meta name="keywords" content="process automation, n8n, workflow automation, time-saving, business efficiency, Manchester automation">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-bg: #111827;
+            --secondary-bg: #1f2937;
+            --accent-color: #8b5cf6;
+            --accent-color-light: #a78bfa;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --highlight: #06b6d4;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(120deg, #2e1065, #4c1d95, #1e40af);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #a78bfa, #06b6d4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card {
+            background-color: var(--secondary-bg);
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .button-primary {
+            background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+            color: white;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5);
+        }
+
+        .button-secondary {
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .button-secondary:hover {
+            background-color: rgba(139, 92, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .pricing-card {
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            background-color: rgba(31, 41, 55, 0.8);
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--accent-color);
+            transform: scale(1.02);
+        }
+
+        .pricing-popular {
+            border: 2px solid var(--highlight);
+        }
+
+        .feature-icon {
+            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        input, textarea, select {
+            background-color: rgba(31, 41, 55, 0.8);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: var(--text-primary);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+        }
+
+        .range-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: var(--secondary-bg);
+            outline: none;
+        }
+
+        .range-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: pointer;
+        }
+
+        .range-slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            cursor: pointer;
+        }
+
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center">
+            <span class="text-2xl font-bold gradient-text">Roger Malek</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#services" class="hover:text-purple-400 transition">Services</a>
+            <a href="#benefits" class="hover:text-purple-400 transition">Benefits</a>
+            <a href="#pricing" class="hover:text-purple-400 transition">Pricing</a>
+            <a href="#calculator" class="hover:text-purple-400 transition">SEO Calculator</a>
+            <a href="#contact" class="hover:text-purple-400 transition">Contact</a>
+        </div>
+        <div class="md:hidden">
+            <button class="text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20 px-6 md:px-12 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Automate Your Business <span class="gradient-text">Processes</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-300">
+                Transform your business workflow with cutting-edge n8n automation solutions. Save time, reduce costs, and eliminate repetitive tasks.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#benefits" class="button-primary py-3 px-8 text-center font-bold">
+                    Discover Benefits
+                </a>
+                <a href="#contact" class="button-secondary py-3 px-8 text-center font-bold">
+                    Get Started
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center fade-in" style="animation-delay: 0.3s;">
+            <div class="relative w-full max-w-lg">
+                <div class="absolute top-0 left-0 w-40 h-40 bg-purple-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                <div class="absolute top-40 right-20 w-60 h-60 bg-cyan-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                <div class="absolute bottom-0 right-0 w-40 h-40 bg-indigo-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                <div class="relative">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                        <path fill="#8B5CF6" d="M45.7,-77.8C59.3,-71.1,70.6,-59.5,79.4,-45.6C88.3,-31.7,94.6,-15.9,93.4,-0.7C92.1,14.4,83.2,28.8,72.6,41.2C62,53.6,49.7,64,36,69.1C22.4,74.3,7.3,74.3,-8.1,73.8C-23.5,73.4,-39.2,72.6,-50.6,65.2C-62.1,57.9,-69.3,44.1,-74.3,29.7C-79.3,15.4,-82.1,0.6,-80.3,-13.6C-78.5,-27.8,-72.1,-41.5,-62.1,-52.5C-52.1,-63.5,-38.5,-71.9,-24.4,-76.4C-10.3,-80.9,4.3,-81.5,18.8,-79.6C33.4,-77.7,48,-84.5,45.7,-77.8Z" transform="translate(100 100)" />
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <i class="fas fa-cogs text-7xl text-white opacity-90"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 md:px-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="gradient-text">Automation Services</span></h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                We specialize in process automation using n8n, a powerful workflow automation platform that connects your apps and services to create efficient workflows.
+            </p>
+        </div>
+
+        <div class="grid-layout">
+            <div class="card p-6 fade-in" style="animation-delay: 0.1s;">
+                <div class="feature-icon mb-6">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Workflow Design</h3>
+                <p class="text-gray-300">
+                    Custom workflow design tailored to your business needs, connecting all your tools and services seamlessly.
+                </p>
+            </div>
+
+            <div class="card p-6 fade-in" style="animation-delay: 0.2s;">
+                <div class="feature-icon mb-6">
+                    <i class="fas fa-cogs text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Integration Solutions</h3>
+                <p class="text-gray-300">
+                    Connect your existing software stack with 400+ integrations to create a unified business process.
+                </p>
+            </div>
+
+            <div class="card p-6 fade-in" style="animation-delay: 0.3s;">
+                <div class="feature-icon mb-6">
+                    <i class="fas fa-code text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Custom Development</h3>
+                <p class="text-gray-300">
+                    Custom nodes and functionality development to extend n8n capabilities for your unique needs.
+                </p>
+            </div>
+
+            <div class="card p-6 fade-in" style="animation-delay: 0.4s;">
+                <div class="feature-icon mb-6">
+                    <i class="fas fa-chart-line text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Performance Optimization</h3>
+                <p class="text-gray-300">
+                    Fine-tune your automation workflows for maximum efficiency and minimal resource consumption.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 px-6 md:px-12 gradient-bg">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">13 Ways Automation <span class="text-cyan-400">Saves Time & Money</span></h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Discover how our automation solutions can transform your business operations, eliminate repetitive tasks, and boost productivity.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Benefit 1 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.1s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            1
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Data Entry Automation</h3>
+                        <p class="text-gray-300">Eliminate manual data entry by automatically transferring information between systems. <strong>Saves 15+ hours/week</strong> and reduces errors by 95%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.2s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            2
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Email Processing</h3>
+                        <p class="text-gray-300">Automate email sorting, responding, and follow-ups based on content. <strong>Saves 10+ hours/week</strong> and improves response times by 80%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.3s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            3
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Invoice Processing</h3>
+                        <p class="text-gray-300">Automate invoice generation, sending, and payment tracking. <strong>Saves 12+ hours/week</strong> and accelerates payment collection by 40%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.4s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            4
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Social Media Management</h3>
+                        <p class="text-gray-300">Schedule, post, and monitor social media content across platforms. <strong>Saves 8+ hours/week</strong> and increases engagement by 35%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 5 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.5s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            5
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Customer Onboarding</h3>
+                        <p class="text-gray-300">Streamline customer onboarding with automated workflows. <strong>Saves 20+ hours/week</strong> and improves customer satisfaction by 65%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 6 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.6s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            6
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Inventory Management</h3>
+                        <p class="text-gray-300">Automate stock tracking, reordering, and supplier notifications. <strong>Saves 15+ hours/week</strong> and reduces stockouts by 75%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 7 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.7s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            7
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Report Generation</h3>
+                        <p class="text-gray-300">Automatically collect data and generate reports on schedule. <strong>Saves 10+ hours/week</strong> and provides real-time business insights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 8 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.8s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            8
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Lead Qualification</h3>
+                        <p class="text-gray-300">Sort and qualify leads based on predefined criteria. <strong>Saves 12+ hours/week</strong> and increases conversion rates by 45%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 9 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 0.9s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            9
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Document Management</h3>
+                        <p class="text-gray-300">Automate document creation, filing, and retrieval. <strong>Saves 8+ hours/week</strong> and reduces document search time by 90%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 10 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 1s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            10
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">HR Process Automation</h3>
+                        <p class="text-gray-300">Streamline employee onboarding, time tracking, and approvals. <strong>Saves 15+ hours/week</strong> and accelerates onboarding by 60%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 11 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 1.1s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            11
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Customer Support Workflows</h3>
+                        <p class="text-gray-300">Automate ticket routing, response templates, and follow-ups. <strong>Saves 10+ hours/week</strong> and reduces response time by 70%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 12 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 1.2s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            12
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">E-commerce Operations</h3>
+                        <p class="text-gray-300">Automate order processing, inventory updates, and shipping notifications. <strong>Saves 18+ hours/week</strong> and improves order accuracy by 95%.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefit 13 -->
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg fade-in" style="animation-delay: 1.3s;">
+                <div class="flex items-start mb-4">
+                    <div class="flex-shrink-0 mr-4">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-600 text-white">
+                            13
+                        </span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Project Management</h3>
+                        <p class="text-gray-300">Automate task assignments, progress tracking, and notifications. <strong>Saves 14+ hours/week</strong> and increases project completion rates by 40%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="mt-12 bg-gray-800 bg-opacity-60 p-8 rounded-lg max-w-4xl mx-auto fade-in" style="animation-delay: 1.4s;">
+            <h3 class="text-2xl font-bold mb-4 text-center">Total Potential Savings:</h3>
+            <div class="flex flex-col md:flex-row justify-around text-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-4xl font-bold text-cyan-400 mb-2">167+ Hours</p>
+                    <p class="text-lg">Weekly Time Savings</p>
+                </div>
+                <div class="mb-6 md:mb-0">
+                    <p class="text-4xl font-bold text-purple-400 mb-2">£8,350+</p>
+                    <p class="text-lg">Monthly Cost Savings*</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-bold text-pink-400 mb-2">55%+</p>
+                    <p class="text-lg">Efficiency Increase</p>
+                </div>
+            </div>
+            <p class="text-sm text-gray-400 mt-6 text-center">*Based on average hourly rate of £50 for skilled labor</p>
+        </div>
+    </section>
+
+    <!-- Problems Solved Section -->
+    <section class="py-20 px-6 md:px-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Problems <span class="gradient-text">Solved</span> By Automation</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Our automation solutions address these common business challenges:
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div class="card p-6 fade-in" style="animation-delay: 0.1s;">
+                <h3 class="text-xl font-bold mb-3 text-purple-400">Process Inefficiencies</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Manual data entry causing bottlenecks</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Duplicate efforts across departments</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Slow approval processes</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card p-6 fade-in" style="animation-delay: 0.2s;">
+                <h3 class="text-xl font-bold mb-3 text-purple-400">Data Management Issues</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Inconsistent data across systems</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Manual report generation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Data duplication errors</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card p-6 fade-in" style="animation-delay: 0.3s;">
+                <h3 class="text-xl font-bold mb-3 text-purple-400">Customer Service Challenges</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Delayed response to customer inquiries</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Inconsistent follow-up processes</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Manual ticketing and routing</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card p-6 fade-in" style="animation-delay: 0.4s;">
+                <h3 class="text-xl font-bold mb-3 text-purple-400">Resource Allocation Problems</h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Skilled employees spending time on routine tasks</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Inefficient task assignment</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Overburdened support teams</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-6 md:px-12 gradient-bg">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent <span class="text-cyan-400">Pricing</span></h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your business needs. All plans include our core automation services with different levels of support and features.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Basic Plan -->
+            <div class="pricing-card rounded-xl p-8 flex flex-col fade-in" style="animation-delay: 0.1s;">
+                <h3 class="text-2xl font-bold mb-2">Basic</h3>
+                <div class="text-sm text-gray-400 mb-6">For small businesses & startups</div>
+                <div class="text-4xl font-bold mb-2">£219<span class="text-lg font-normal text-gray-400">/month</span></div>
+                <div class="text-sm text-gray-400 mb-6">35% below market rate</div>
+                <ul class="mb-8 flex-grow space-y-4">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Up to 3 automated workflows</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>2,500 monthly executions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Standard support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>1 user</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Basic monitoring</span>
+                    </li>
+                </ul>
+                <a href="#contact" class="button-secondary py-3 text-center font-bold">Get Started</a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="pricing-card pricing-popular rounded-xl p-8 flex flex-col relative fade-in" style="animation-delay: 0.2s;">
+                <div class="absolute top-0 right-0 bg-cyan-500 text-white text-xs font-bold py-1 px-3 rounded-tr-lg rounded-bl-lg">
+                    MOST POPULAR
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                <div class="text-sm text-gray-400 mb-6">For growing businesses</div>
+                <div class="text-4xl font-bold mb-2">£399<span class="text-lg font-normal text-gray-400">/month</span></div>
+                <div class="text-sm text-gray-400 mb-6">35% below market rate</div>
+                <ul class="mb-8 flex-grow space-y-4">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Up to 6 automated workflows</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>10,000 monthly executions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Priority support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>3 users</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Advanced monitoring</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Workflow history (30 days)</span>
+                    </li>
+                </ul>
+                <a href="#contact" class="button-primary py-3 text-center font-bold">Get Started</a>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card rounded-xl p-8 flex flex-col fade-in" style="animation-delay: 0.3s;">
+                <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                <div class="text-sm text-gray-400 mb-6">For larger organizations</div>
+                <div class="text-4xl font-bold mb-2">£830<span class="text-lg font-normal text-gray-400">/month</span></div>
+                <div class="text-sm text-gray-400 mb-6">35% below market rate</div>
+                <ul class="mb-8 flex-grow space-y-4">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Over 10 automated workflows</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>50,000 monthly executions</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Dedicated support</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Unlimited users</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Premium monitoring</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Workflow history (1 year)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Custom integrations</span>
+                    </li>
+                </ul>
+                <a href="#contact" class="button-secondary py-3 text-center font-bold">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Calculator Section -->
+    <section id="calculator" class="py-20 px-6 md:px-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Automation <span class="gradient-text">ROI Calculator</span></h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Calculate your potential return on investment from implementing our automation solutions.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-gray-800 rounded-xl p-8 fade-in">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-6">
+                        <label class="block text-gray-300 mb-2">Number of employees affected:</label>
+                        <input type="range" id="employeeCount" min="1" max="50" value="5" class="range-slider mb-2">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>1</span>
+                            <span id="employeeCountValue">5</span>
+                            <span>50</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-300 mb-2">Average hourly wage (£):</label>
+                        <input type="range" id="hourlyWage" min="10" max="100" value="25" class="range-slider mb-2">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>£10</span>
+                            <span id="hourlyWageValue">£25</span>
+                            <span>£100</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-300 mb-2">Hours spent on repetitive tasks per week:</label>
+                        <input type="range" id="hoursPerWeek" min="1" max="40" value="10" class="range-slider mb-2">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>1h</span>
+                            <span id="hoursPerWeekValue">10h</span>
+                            <span>40h</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-300 mb-2">Automation level (% of tasks automated):</label>
+                        <input type="range" id="automationLevel" min="20" max="95" value="70" class="range-slider mb-2">
+                        <div class="flex justify-between text-sm text-gray-400">
+                            <span>20%</span>
+                            <span id="automationLevelValue">70%</span>
+                            <span>95%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4 text-center text-purple-400">Your Potential Savings</h3>
+                    
+                    <div class="mb-6">
+                        <p class="text-gray-400 mb-1">Weekly hours saved:</p>
+                        <p id="hoursSaved" class="text-2xl font-bold text-white">35 hours</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <p class="text-gray-400 mb-1">Monthly cost savings:</p>
+                        <p id="monthlySavings" class="text-2xl font-bold text-cyan-400">£3,500</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <p class="text-gray-400 mb-1">Annual cost savings:</p>
+                        <p id="annualSavings" class="text-2xl font-bold text-purple-400">£42,000</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <p class="text-gray-400 mb-1">ROI timeline:</p>
+                        <p id="roiTimeline" class="text-2xl font-bold text-green-400">1.2 months</p>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="#contact" class="button-primary py-3 px-6 inline-block font-bold">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-20 px-6 md:px-12 gradient-bg">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to <span class="text-cyan-400">Automate</span> Your Business?</h2>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Fill out the form below to discuss how our automation solutions can help your business save time and money.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-gray-800 bg-opacity-50 rounded-xl p-8 fade-in">
+            <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="md:col-span-1">
+                    <label class="block text-gray-300 mb-2" for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required class="w-full">
+                </div>
+                
+                <div class="md:col-span-1">
+                    <label class="block text-gray-300 mb-2" for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required class="w-full">
+                </div>
+                
+                <div class="md:col-span-1">
+                    <label class="block text-gray-300 mb-2" for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" placeholder="Your company" required class="w-full">
+                </div>
+                
+                <div class="md:col-span-1">
+                    <label class="block text-gray-300 mb-2" for="industry">Industry</label>
+                    <select id="industry" name="industry" class="w-full">
+                        <option value="">Select your industry</option>
+                        <option value="ecommerce">E-commerce</option>
+                        <option value="finance">Finance</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="retail">Retail</option>
+                        <option value="software">Software/IT</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <label class="block text-gray-300 mb-2" for="employees">Number of Employees</label>
+                    <select id="employees" name="employees" class="w-full">
+                        <option value="">Select employee count</option>
+                        <option value="1-10">1-10</option>
+                        <option value="11-50">11-50</option>
+                        <option value="51-200">51-200</option>
+                        <option value="201-500">201-500</option>
+                        <option value="500+">500+</option>
+                    </select>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <label class="block text-gray-300 mb-2" for="automation_interest">What would you like to automate? *</label>
+                    <textarea id="automation_interest" name="automation_interest" placeholder="Describe the processes you'd like to automate" required class="w-full h-32"></textarea>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <label class="block text-gray-300 mb-2">Interested in:</label>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="interest" value="workflow" class="mr-2">
+                            <span>Workflow Automation</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="interest" value="data" class="mr-2">
+                            <span>Data Integration</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="interest" value="api" class="mr-2">
+                            <span>API Connections</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="interest" value="custom" class="mr-2">
+                            <span>Custom Solutions</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-2 flex flex-col sm:flex-row justify-between items-center mt-6">
+                    <label class="flex items-center mb-4 sm:mb-0">
+                        <input type="checkbox" name="consent" required class="mr-2">
+                        <span class="text-sm text-gray-300">I agree to be contacted about automation services *</span>
+                    </label>
+                    <button type="submit" class="button-primary py-3 px-8 font-bold">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-12 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-2xl font-bold gradient-text">Roger Malek</span>
+                    <p class="text-gray-400 mt-2">Process Automation Specialist</p>
+                    <p class="text-gray-400">Based in Manchester, UK</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
+                <div class="text-sm text-gray-500 mb-4 md:mb-0">
+                    &copy; 2024 Roger Malek. All rights reserved.
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="text-sm text-gray-500 hover:text-purple-400 transition">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-500 hover:text-purple-400 transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ROI Calculator Logic
+        const employeeCount = document.getElementById('employeeCount');
+        const hourlyWage = document.getElementById('hourlyWage');
+        const hoursPerWeek = document.getElementById('hoursPerWeek');
+        const automationLevel = document.getElementById('automationLevel');
+        
+        const employeeCountValue = document.getElementById('employeeCountValue');
+        const hourlyWageValue = document.getElementById('hourlyWageValue');
+        const hoursPerWeekValue = document.getElementById('hoursPerWeekValue');
+        const automationLevelValue = document.getElementById('automationLevelValue');
+        
+        const hoursSaved = document.getElementById('hoursSaved');
+        const monthlySavings = document.getElementById('monthlySavings');
+        const annualSavings = document.getElementById('annualSavings');
+        const roiTimeline = document.getElementById('roiTimeline');
+        
+        function calculateROI() {
+            const employees = parseInt(employeeCount.value);
+            const wage = parseInt(hourlyWage.value);
+            const hours = parseInt(hoursPerWeek.value);
+            const automation = parseInt(automationLevel.value) / 100;
+            
+            // Update display values
+            employeeCountValue.textContent = employees;
+            hourlyWageValue.textContent = `£${wage}`;
+            hoursPerWeekValue.textContent = `${hours}h`;
+            automationLevelValue.textContent = `${automationLevel.value}%`;
+            
+            // Calculate savings
+            const weeklySavedHours = Math.round(employees * hours * automation);
+            const monthlySavedMoney = Math.round(weeklySavedHours * wage * 4); // 4 weeks in a month
+            const annualSavedMoney = monthlySavedMoney * 12;
+            
+            // Estimate ROI timeline (months to recoup cost)
+            // Assuming an average implementation cost based on plan
+            let implementationCost;
+            if (employees <= 10) {
+                implementationCost = 3000; // Basic plan setup
+            } else if (employees <= 30) {
+                implementationCost = 6000; // Pro plan setup
+            } else {
+                implementationCost = 12000; // Enterprise plan setup
+            }
+            
+            const roiMonths = (monthlySavedMoney > 0) ? 
+                Math.round((implementationCost / monthlySavedMoney) * 10) / 10 : 
+                "--";
+            
+            // Update results
+            hoursSaved.textContent = `${weeklySavedHours} hours`;
+            monthlySavings.textContent = `£${monthlySavedMoney.toLocaleString()}`;
+            annualSavings.textContent = `£${annualSavedMoney.toLocaleString()}`;
+            roiTimeline.textContent = `${roiMonths} months`;
+        }
+        
+        // Add event listeners
+        employeeCount.addEventListener('input', calculateROI);
+        hourlyWage.addEventListener('input', calculateROI);
+        hoursPerWeek.addEventListener('input', calculateROI);
+        automationLevel.addEventListener('input', calculateROI);
+        
+        // Initial calculation
+        calculateROI();
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you shortly to discuss your automation needs.');
+            this.reset();
+        });
+
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            function checkFade() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementBottom = element.getBoundingClientRect().bottom;
+                    const isVisible = (elementTop < window.innerHeight - 100) && (elementBottom > 0);
+                    
+                    if (isVisible) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // Set initial state
+            fadeElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            });
+            
+            window.addEventListener('scroll', checkFade);
+            window.addEventListener('resize', checkFade);
+            checkFade(); // Check on page load
+        });
+    </script>
+</body>
+</html>

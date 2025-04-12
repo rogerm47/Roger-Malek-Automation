@@ -1,0 +1,356 @@
+/* Reset i podstawowe style */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Zmienne kolorów - Tryb Jasny (Domyślny) */
+:root {
+    --bg-color: #f8f9fa; /* Jasnoszary */
+    --text-color: #212529; /* Ciemnoszary */
+    --primary-color: #0d6efd; /* Niebieski */
+    --secondary-color: #6c757d; /* Szary */
+    --accent-color: #0dcaf0; /* Jasnoniebieski/Turkusowy */
+    --header-bg: #ffffff;
+    --footer-bg: #e9ecef;
+    --button-bg: var(--primary-color);
+    --button-text: #ffffff;
+    --link-color: var(--primary-color);
+    --container-max-width: 1140px;
+    --container-padding: 1rem;
+}
+
+/* Zmienne kolorów - Tryb Ciemny */
+body[data-theme='dark'] {
+    --bg-color: #1a1a2e; /* Głęboki granat/fiolet */
+    --text-color: #e0e0e0; /* Jasnoszary */
+    --primary-color: #9d4edd; /* Fioletowy akcent */
+    --secondary-color: #a0a0a0; /* Jasnoszary */
+    --accent-color: #00f5d4; /* Elektryczny turkus/mięta */
+    --header-bg: #161625; /* Ciemniejszy granat */
+    --footer-bg: #161625;
+    --button-bg: var(--accent-color);
+    --button-text: #1a1a2e; /* Ciemny tekst na jasnym przycisku */
+    --link-color: var(--accent-color);
+}
+
+/* Kontener */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Nagłówek */
+header {
+    background-color: var(--header-bg);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+header nav {
+    display: none; /* Ukryte na małych ekranach, do dodania menu mobilnego później */
+}
+
+header nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Sekcje */
+main section {
+    padding: 3rem 0;
+}
+
+main section:nth-child(odd) {
+    /* Można dodać lekkie tło dla rozróżnienia sekcji w trybie jasnym */
+     /* background-color: #f1f3f5; */
+}
+
+body[data-theme='dark'] main section:nth-child(odd) {
+     /* background-color: #1f1f35; */ /* Lekko jaśniejsze tło dla sekcji w trybie ciemnym */
+}
+
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Sekcja Hero */
+#hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--button-text); /* Jasny tekst na gradiencie */
+}
+
+body[data-theme='dark'] #hero {
+     background: linear-gradient(135deg, #2a0d45, #1a1a2e 70%); /* Ciemniejszy gradient */
+     color: #e0e0e0;
+}
+
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: inherit; /* Dziedziczy kolor z #hero */
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: inherit;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: darken(var(--button-bg), 10%); /* Funkcja darken nie działa bezpośrednio w CSS, trzeba będzie użyć ciemniejszego koloru */
+    /* Dla trybu jasnego: */
+    /* background-color: #0b5ed7; */
+    /* Dla trybu ciemnego: */
+    /* background-color: #00d1b2; */
+    transform: translateY(-2px);
+}
+
+/* Formularz Kontaktowy */
+#kontakt form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--header-bg); /* Użycie tła nagłówka dla spójności */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#kontakt label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+#kontakt input[type="text"],
+#kontakt input[type="email"],
+#kontakt textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#kontakt input[type="text"]:focus,
+#kontakt input[type="email"]:focus,
+#kontakt textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-color-rgb, 13, 110, 253), 0.25); /* Wymaga zdefiniowania --primary-color-rgb */
+}
+
+/* Definicja --primary-color-rgb dla focus */
+:root {
+    --primary-color-rgb: 13, 110, 253;
+}
+body[data-theme='dark'] {
+    --primary-color-rgb: 157, 78, 221;
+}
+
+
+#kontakt textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#kontakt button[type="submit"] {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#kontakt button[type="submit"]:hover {
+    /* Podobnie jak w .cta-button, wymaga ręcznego ustawienia ciemniejszego koloru */
+    transform: translateY(-2px);
+}
+
+
+/* Stopka */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--secondary-color);
+    padding: 2rem 0 1rem;
+    margin-top: 3rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+footer h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+footer a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.qr-code p {
+    font-style: italic;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+body[data-theme='dark'] .copyright {
+    border-top-color: #343a40;
+}
+
+/* Responsywność */
+@media (min-width: 768px) {
+    header nav {
+        display: block; /* Pokaż nawigację na większych ekranach */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    #hero h2 {
+        font-size: 3rem;
+    }
+
+     #hero p {
+        font-size: 1.2rem;
+    }
+
+    main section {
+        padding: 4rem 0;
+    }
+
+    footer .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-content > div {
+        flex-basis: 48%; /* Rozdzielenie na dwie kolumny */
+    }
+}
+
+@media (min-width: 992px) {
+    :root {
+        --container-padding: 1.5rem;
+    }
+     h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Style dla placeholderów - można je później usunąć/zmodyfikować */
+section p:contains("Placeholder") {
+    font-style: italic;
+    color: var(--secondary-color);
+    border: 1px dashed var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(108, 117, 125, 0.1); /* Lekkie tło dla placeholderów */
+}
+
+body[data-theme='dark'] section p:contains("Placeholder") {
+     background-color: rgba(160, 160, 160, 0.1);
+}
